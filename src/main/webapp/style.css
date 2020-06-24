@@ -35,3 +35,12 @@ body {
 	margin: auto;
 	width: 40em;
 }
+.last_page {
+    background-image: url("/images/Arch_Matrix.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    height: 100vh
+}
