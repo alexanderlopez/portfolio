@@ -3,13 +3,14 @@
 	<head>
 		<title>Alexander Lopez</title>
 		<link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
 	</head>
 	<body>
 		<div class="intro">
 			<div class="divtext_center">
 				<h1 id="hi_text">Hi! I'm Alexander Lopez</h1>
 				<ul id="intro_list">
-					<li>student @<a href="http://www.princeton.edu" title="Princeton home page"><img alt="Princeton Univeristy logo" src="/images/PU-standard.png"></a></li>
+					<li>student @<a href="http://www.princeton.edu" title="Princeton home page"><img alt="Princeton Univeristy logo" src="/images/PU-standard.png"/></a></li>
 					<li>intern: STEP Program @<a href="http://about.google.com">Google LLC</a></li>
 				</ul>
 				<p id="scroll_text">Scroll down for more!</p>
@@ -17,11 +18,96 @@
 		</div>
 		<div class="about_me">
 			<div class="about_center">
-				<h2>THIS IS ME</h2>
+                <div class="description_area">
+			        <h1 id="me_text">This is me:</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat dignissim nulla ut tempor.
+                        Curabitur at lectus eget felis ullamcorper ultricies nec ut lorem.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Morbi pharetra consectetur ultricies.
+                        Duis finibus, leo eget feugiat pellentesque, ex libero rutrum risus, eu volutpat nisl tortor nec quam.
+                        In hac habitasse platea dictumst. Sed sed justo ac tortor ultrices consectetur.
+                        Mauris sit amet accumsan augue, scelerisque laoreet magna.
+                        Phasellus ipsum est, efficitur ut nunc ut, dignissim malesuada ex.
+                        Donec et molestie odio. Praesent consectetur elit eu elementum bibendum.
+                        Mauris sed ante et lorem egestas volutpat eget non ligula.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                        Etiam sit amet sollicitudin urna, vitae bibendum sapien.
+                        Nunc finibus eros efficitur massa viverra, vel fermentum lorem volutpat.</p>
+                </div>
+                <img src="/images/GD5_1435_web.jpg" alt="A picture of myself" title="From my highschool graduation."/>
 			</div>
+            <div class="two_buttons">
+                <form action="/files/alexander_resume.pdf">
+                    <input type="submit" value="Download my CV" />
+                </form>
+                <br/>
+                <br/>
+                <form action="mailto:alexanderlopez@princeton.edu">
+                    <input type="submit" value="Contact me" />
+                </form>
+            </div>
 		</div>
         <div class="last_page">
-            <h1>Random stuff</h1>
+            <div class="relevant_coursework">
+                <h1>Relevant Coursework</h1>
+                <div class="computer_science">
+                    <!-- Add a nice round image representing computer science, same for phy and math -->
+                    <div class="section_title">
+                        <img src="/images/cs.png" alg="Computer Science"/>
+                        <h2>CS</h2>
+                    </div>
+                    <ul>
+                        <li>Algorithms and Data Structures (COS 226, Spring 2019)</li>
+                        <li>Computational Geometry (COS 451, Fall 2019)</li>
+                        <li>Reasoning about Computation (COS 340, Spring 2020)</li>
+                    </ul>
+                </div>
+                <div class="physics">
+                    <div class="section_title">
+                        <img src="/images/phy.png" alg="Physics"/>
+                        <h2>Physics</h2>
+                    </div>
+                    <ul>
+                        <li>Advanced Physics [Mechanics] (PHY 105, Fall 2018)</li>
+                        <li>Advanced Physics [Electromagnetism] (PHY 106, Spring 2019)</li>
+                        <li>Advanced Electromagnetism (PHY 304, Spring 2020)</li>
+                    </ul>
+                </div>
+                <div class="mathematics">
+                    <div class="section_title">
+                        <img src="/images/math.png" alg="Mathematics"/>
+                        <h2>Mathematics</h2>
+                    </div>
+                    <ul>
+                        <li>Algebraic Number Theory (MAT 419, Spring 2020)</li>
+                        <li>Probability and Stochastic Systems (MAT 380, Spring 2019)</li>
+                        <li>Introduction to Differential Geometry (MAT 355, Spring 2020)</li>
+                        <li>Algebra I (MAT 345, Fall 2019)</li>
+                        <li>Analysis II: Compplex Analysis (MAT 355, Fall 2019)</li>
+                        <li>Honors Linear Algebra (MAT 217, Spring 2019)</li>
+                        <li>Honors Analysis [Single Variable] (MAT 215, Fall 2018)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image_gallery">
+                <h2>Gallery</h2>
+                <img id="gallery_view" src="/images/young_pc.jpg" alt="Gallery view"/>
+                <div class="gallery_controls">
+                    <button id="random" onclick="getRandomImage()">Random Image</button>
+                </div>
+            </div>
+            <div class="linux_user">
+                <h2>Archlinux user</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent dignissim diam vel mauris lacinia, a efficitur odio fringilla.
+                    Fusce et lorem in purus eleifend vestibulum.
+                    Nunc dapibus mauris vitae odio tincidunt tempor.
+                    Nulla laoreet tempor lorem non auctor. Donec sagittis.
+                </p>
+            </div>
         </div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a>, 
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, and <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a>
+             from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 	</body>
 </html>

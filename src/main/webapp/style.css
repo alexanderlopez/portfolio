@@ -27,20 +27,102 @@ body {
 	text-align: center;
 }
 .about_me {
-	height: 40vh;
-	background-color: #CCCCCC;
-	margin-top: -1.25em;
+	height: 60vh;
+	background-color: #FAFAFA;
+    display: flex;
+	/*margin-top: -1.25em;*/
 }
 .about_center {
 	margin: auto;
-	width: 40em;
+	width: 45em;
+    display: flex;
+    height: 100%;
+    margin-right: 5em;
 }
 .last_page {
-    background-image: url("/images/Arch_Matrix.jpg");
+    background-image: url("/images/Arch_makepkg.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: bottom right;
     overflow: hidden;
-    height: 100vh
+    height: 100vh;
+    display: flex;
+    color: white;
+}
+.about_center img {
+    width: auto;
+    max-height: 85%;
+    margin: auto;
+    border-radius: 0.5em;
+}
+.description_area {
+    margin: auto;
+    margin-right: 3em;
+}
+.two_buttons {
+    margin: auto;
+    margin-left: 0;
+}
+.two_buttons input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 12em;
+    height: 3em;
+    font-size: xx-large;
+    /*float: right;*/
+}
+.relevant_coursework {
+    text-align: center;
+    margin: auto;
+    display: grid;
+    width: 30%
+}
+.image_gallery {
+    margin: auto;
+    width: 35%;
+    text-align: center;
+}
+.linux_user {
+    margin: auto;
+    text-align: center;
+    width: 15%;
+}
+.relevant_coursework ul {
+    text-align: left;
+}
+.relevant_coursework img {
+    width: auto;
+    max-height: 3.5em;
+    margin: auto;
+    margin-right: 0.5em;
+}
+.section_title {
+    margin: auto;
+    display: flex;
+}
+.section_title h2{
+    margin: auto;
+    margin-left: 0.5em;
+}
+#gallery_view {
+    max-width: 70%;
+    max-height: 50%;
+    width: auto;
+    height: auto;
+}
+#random {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 12em;
+    height: 3em;
+    font-size: xx-large;
 }
