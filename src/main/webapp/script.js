@@ -8,14 +8,4 @@ function getRandomImage() {
     var result = Math.floor(Math.random()*length);
 
     gallery.src = IMAGE_ARRAY[result];
-
-    console.log(result, IMAGE_ARRAY[result]);
-}
-
-function addServletText() {
-    fetch('/data').then((response) => response.text()).then(response_text => {
-        document.getElementById('fetch_test').innerHTML = response_text;
-        console.log(response_text);
-    });
-    console.log('Done');
 }

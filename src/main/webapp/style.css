@@ -154,3 +154,20 @@ h2{
     display: grid;
     grid-template-columns: auto auto;
 }
+
+/* Styling below is for the dynamically generated comment section */
+#comments_title {
+    text-align: center;
+    height: 6vh;
+}
+#comments_title h1 {
+    margin: 0;
+}
+.comments_page {
+    height: calc(94vh - 1em);
+    background-image: url("/images/Arch_Matrix.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
