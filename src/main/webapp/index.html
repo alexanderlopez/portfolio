@@ -6,7 +6,7 @@
         <script src="script.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=IBM+Plex+Serif:wght@500&family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
 	</head>
-	<body onload="addServletText()">
+	<body>
 		<div class="intro">
 			<div class="divtext_center">
 				<h1 id="hi_text">Hi!</br/>I'm Alexander Lopez</h1>
@@ -109,7 +109,24 @@
         </div>
         <div id="comments_title"><h1>Comments</h1></div>
         <div class="comments_page">
-
+            <div class="comment_section">
+                <table id="com_table">
+                    <colgroup>
+                        <col style="width: 30%;">
+                        <col style="width: 70%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <th>Comment</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="comment_form">
+                <h1 style="color: white;">Com Frm</h1>
+                <button onclick="getData()">Click</button>
+            </div>
         </div>
         <div style="height: 1em; overflow: visible; font-size: 1em;">Icons made
              by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a>, 
