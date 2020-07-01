@@ -25,6 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
+    private static final String MAX_COMMENTS_KEY = "max_comments";
 
   private CommentTable commentList = new CommentTable();
 
@@ -32,8 +33,22 @@ public class DataServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("application/json;");
     
-    String json = new Gson().toJson(commentList.getCommentEntries());
+    String json = new Gson().toJson(commentList.getCommentEntries(getMaxComments(request)));
     response.getWriter().println(json);
+  }
+
+  private int getMaxComments(HttpServletRequest request) {
+        String maxCommentsString = request.getParameter(MAX_COMMENTS_KEY);
+
+        int maxComments;
+        if (maxCommentsString == null || maxCommentsString.isEmpty()) {
+            maxComments = -1;
+        }
+        else {
+            maxComments = Integer.parseInt(maxCommentsString);
+        }
+        
+        return maxComments;
   }
 
   @Override

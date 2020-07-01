@@ -110,18 +110,27 @@
         <div id="comments_title"><h1>Comments</h1></div>
         <div class="comments_page">
             <div class="comment_section">
-                <table id="comment_table">
-                    <colgroup>
-                        <col style="width: 30%;">
-                        <col style="width: 70%;">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th>Name</th>
-                            <th>Comment</th>
-                        </tr>
-                    </tbody>
-                </table>
+                <div id="table_container">
+                    <table id="comment_table">
+                        <colgroup>
+                            <col style="width: 30%;">
+                            <col style="width: 70%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="comment_options">
+                    <input type="number" id="max_comments" min=1 value="100">
+                    <button onclick="getComments()">Submit</button>
+                    <button onclick="dosomething()">Delete Comments</button>
+                </div>
             </div>
             <div class="comment_form_container">
                 <h1 style="color: white; text-align: center;">Submit Comment</h1>

@@ -10,13 +10,28 @@ function getRandomImage() {
     gallery.src = IMAGE_ARRAY[result];
 }
 
-function getComments() {
-    fetch('/data').then(response => response.json()).then(commentList => {
+function clearTable() {
+    document.getElementById('table_body').innerHTML = '';
+}
 
-        var table = document.getElementById('comment_table');
+function getComments() {
+    var fetchString = '/data';
+    
+    var maxComments = document.getElementById('max_comments');
+    console.log(maxComments.value);
+    
+    if (parseInt(maxComments.value) > 0) {
+        fetchString = fetchString.concat('?max_comments=',maxComments.value);
+    }
+
+    clearTable();
+
+    fetch(fetchString).then(response => response.json()).then(commentList => {
+
+        var table = document.getElementById('table_body');
 
         commentList.forEach(entry => {
-            var newRow = table.insertRow(1);
+            var newRow = table.insertRow(0);
 
             var nameCell = newRow.insertCell(0);
             var commentCell = newRow.insertCell(1);

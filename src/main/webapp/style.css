@@ -175,19 +175,23 @@ h2{
     grid-template-rows: 100%;
 }
 .comment_section {
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 90%;
-    height: 90%;
-    overflow-y: scroll;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    grid-template-columns: 100%;
 }
 #comment_table {
-    margin: auto;
+    margin: 0;
     width: 100%;
     color: black;
     background-color: white;
     border-collapse: collapse;
+}
+#table_container {
+    margin: 60px auto;
+    width: 90%;
+    height: calc(100% - 120px);
+    overflow-y: scroll;
 }
 #comment_table th, #comment_table td {
     border: 1px solid gray;
@@ -221,4 +225,7 @@ h2{
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
     border-radius: 4px;
+}
+.comment_options {
+    
 }
