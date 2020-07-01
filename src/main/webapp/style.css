@@ -182,10 +182,43 @@ h2{
     height: 90%;
     overflow-y: scroll;
 }
-#com_table {
+#comment_table {
     margin: auto;
     width: 100%;
     color: black;
     background-color: white;
     border-collapse: collapse;
+}
+#comment_table th, #comment_table td {
+    border: 1px solid gray;
+}
+#comment_form {
+    display: grid;
+    grid-template-rows: 3em 70% 3em;
+    grid-row-gap: 1em;
+    height: 80%;
+    margin:auto;
+    width: 80%;
+}
+#comment_form input {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+}
+#comment_form input[type="text"] {
+    padding-left: 2em;
+    border-radius: 4px;
+}
+#comment_form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#comment_form textarea {
+    padding: 2em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    border-radius: 4px;
 }
