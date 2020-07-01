@@ -32,14 +32,14 @@ public class DataServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("application/json;");
     
-    String json = new Gson().toJson(commentList);
+    String json = new Gson().toJson(commentList.getCommentEntries());
     response.getWriter().println(json);
   }
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String name = request.getParameter("name");
-    String comment = request.getParameter("comment");
+    String name = request.getParameter(CommentTable.NAME_KEY);
+    String comment = request.getParameter(CommentTable.COMMENT_KEY);
 
     commentList.addEntry(name, comment);
 

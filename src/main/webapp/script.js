@@ -15,7 +15,7 @@ function getComments() {
 
         var table = document.getElementById('comment_table');
 
-        commentList.commentTable.forEach(entry => {
+        commentList.forEach(entry => {
             var newRow = table.insertRow(1);
 
             var nameCell = newRow.insertCell(0);
