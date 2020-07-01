@@ -10,15 +10,19 @@ function getRandomImage() {
     gallery.src = IMAGE_ARRAY[result];
 }
 
-function getData() {
-    fetch('/data').then(response => response.json()).then(respObj => {
-        var comTable = document.getElementById('com_table');
-        var newRow = comTable.insertRow(-1);
+function getComments() {
+    fetch('/data').then(response => response.json()).then(commentList => {
 
-        var nameCell = newRow.insertCell(0);
-        var commentCell = newRow.insertCell(1);
+        var table = document.getElementById('comment_table');
 
-        nameCell.innerHTML = respObj.name;
-        commentCell.innerHTML = respObj.comment;
+        commentList.forEach(entry => {
+            var newRow = table.insertRow(1);
+
+            var nameCell = newRow.insertCell(0);
+            var commentCell = newRow.insertCell(1);
+
+            nameCell.innerHTML = entry.name;
+            commentCell.innerHTML = entry.comment;
+        });
     });
 }
