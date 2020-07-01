@@ -8,14 +8,17 @@ function getRandomImage() {
     var result = Math.floor(Math.random()*length);
 
     gallery.src = IMAGE_ARRAY[result];
-
-    console.log(result, IMAGE_ARRAY[result]);
 }
 
-function addServletText() {
-    fetch('/data').then((response) => response.text()).then(response_text => {
-        document.getElementById('fetch_test').innerHTML = response_text;
-        console.log(response_text);
+function getData() {
+    fetch('/data').then(response => response.json()).then(respObj => {
+        var comTable = document.getElementById('com_table');
+        var newRow = comTable.insertRow(-1);
+
+        var nameCell = newRow.insertCell(0);
+        var commentCell = newRow.insertCell(1);
+
+        nameCell.innerHTML = respObj.name;
+        commentCell.innerHTML = respObj.comment;
     });
-    console.log('Done');
 }
