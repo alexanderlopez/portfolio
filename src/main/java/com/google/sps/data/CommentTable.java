@@ -29,11 +29,20 @@ public class CommentTable {
             return;
         }
 
+        if (checkInjection(name, comment)) {
+            return;
+        }
+
         Entity commentEntity = new Entity(ENTRY_KEY);
         commentEntity.setProperty(NAME_KEY, name);
         commentEntity.setProperty(COMMENT_KEY, comment);
 
         datastore.put(commentEntity);
+    }
+
+    private boolean checkInjection(String name, String comment) {
+        // Naive check for HTML injection by not allowing <, > in the text
+        return !(name.indexOf('<') == -1 && comment.indexOf('>') == -1);
     }
 
     public List<Comment> getCommentEntries() {
