@@ -2,12 +2,21 @@ const IMAGE_ARRAY = ['/images/young_pc.jpg', '/images/pico_fogata.JPG',
     '/images/pico_17.jpg','/images/pico_07.JPG','/images/killington.jpg',
     '/images/saona.jpg'];
 
+const CAPTION_ARRAY = ['Interacting with a personal computer while young.',
+                       'Campfire in the middle of a valley [Valle del Tetero].',
+                       'Fifteenth summit of the tallest mountain in the Dominican Republic.',
+                       'First summit of the tallest mountain in the Dominican Republic.',
+                       'Landscape at Killington (VT) summit.',
+                       'Isla Saona (island to the south of the Dominican Republic).']
+
 function getRandomImage() {
     var gallery = document.getElementById('gallery_view');
+    var galleryText = document.getElementById('gallery_description');
     var length = IMAGE_ARRAY.length;
     var result = Math.floor(Math.random()*length);
 
     gallery.src = IMAGE_ARRAY[result];
+    galleryText.innerText = CAPTION_ARRAY[result];
 }
 
 function clearTable() {
