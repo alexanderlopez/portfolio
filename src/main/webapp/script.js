@@ -33,7 +33,6 @@ function getComments() {
     var fetchString = '/data';
     
     var maxComments = document.getElementById('max_comments');
-    console.log(maxComments.value);
     
     if (parseInt(maxComments.value) > 0) {
         fetchString = fetchString.concat('?max_comments=',maxComments.value);
