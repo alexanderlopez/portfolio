@@ -177,7 +177,7 @@ h2{
 .comment_section {
     margin: 0;
     display: grid;
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 90% 10%;
     grid-template-columns: 100%;
 }
 #comment_table {
@@ -226,6 +226,19 @@ h2{
     font-weight: 500;
     border-radius: 4px;
 }
+.comment_options button, .comment_options input {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    height: 80%
+}
 .comment_options {
-    
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+}
+#delete_button {
+    margin: auto;
+    margin-left: 50px;
+    width: 10em;
+    height: 90%;
 }

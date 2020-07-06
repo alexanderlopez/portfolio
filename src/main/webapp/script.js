@@ -14,6 +14,12 @@ function clearTable() {
     document.getElementById('table_body').innerHTML = '';
 }
 
+function deleteComments() {
+    fetch('/delete-data', {method: 'POST'}).then(response => {
+        getComments()
+    });
+}
+
 function getComments() {
     var fetchString = '/data';
     

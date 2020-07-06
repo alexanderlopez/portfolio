@@ -127,9 +127,11 @@
                     </table>
                 </div>
                 <div class="comment_options">
-                    <input type="number" id="max_comments" min=1 value="100">
-                    <button onclick="getComments()">Submit</button>
-                    <button onclick="dosomething()">Delete Comments</button>
+                    <div style="display: inline-block; margin: auto; margin-left: 50px; height: 100%;">
+                        <input type="number" id="max_comments" min=1 value="100">
+                        <button style="height: 92%;" onclick="getComments()">Submit</button>
+                    </div>
+                    <button id="delete_button" onclick="deleteComments()">Delete Comments</button>
                 </div>
             </div>
             <div class="comment_form_container">
