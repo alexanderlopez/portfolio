@@ -12,31 +12,29 @@
 				<h1 id="hi_text">Hi!</br/>I'm Alexander Lopez</h1>
 				<ul id="intro_list">
 					<li><div id="princeton_line"><span>student @</span><a href="http://www.princeton.edu" title="Princeton home page"><img alt="Princeton Univeristy logo" src="/images/PU-standard.png"/></a></div></li>
-					<li>intern: STEP Program @<a href="http://about.google.com">Google LLC</a></li>
+					<li>intern: STEP Program @<a href="http://about.google.com"><span style='color: #4285f4'>G</span><span style='color: #ea4335'>o</span><span style='color: #fbbc05'>o</span><span style='color: #4285f4'>g</span><span style='color: #34a853'>l</span><span style='color: #ea4335'>e</span> LLC</a></li>
 				</ul>
 				<p id="scroll_text">Scroll down for more!</p>
 			</div>
 		</div>
 		<div class="about_me">
-			<div class="about_center">
-                <div class="description_area">
-			        <h1 id="me_text">This is me:</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat dignissim nulla ut tempor.
-                        Curabitur at lectus eget felis ullamcorper ultricies nec ut lorem.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Morbi pharetra consectetur ultricies.
-                        Duis finibus, leo eget feugiat pellentesque, ex libero rutrum risus, eu volutpat nisl tortor nec quam.
-                        In hac habitasse platea dictumst. Sed sed justo ac tortor ultrices consectetur.
-                        Mauris sit amet accumsan augue, scelerisque laoreet magna.
-                        Phasellus ipsum est, efficitur ut nunc ut, dignissim malesuada ex.
-                        Donec et molestie odio. Praesent consectetur elit eu elementum bibendum.
-                        Mauris sed ante et lorem egestas volutpat eget non ligula.
-                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-                        Etiam sit amet sollicitudin urna, vitae bibendum sapien.
-                        Nunc finibus eros efficitur massa viverra, vel fermentum lorem volutpat.</p>
-                </div>
-                <img src="/images/GD5_1435_web.jpg" alt="A picture of myself" title="From my highschool graduation."/>
-			</div>
+            <div class="description_area">
+                <h1 id="me_text">This is me:</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat dignissim nulla ut tempor.
+                    Curabitur at lectus eget felis ullamcorper ultricies nec ut lorem.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi pharetra consectetur ultricies.
+                    Duis finibus, leo eget feugiat pellentesque, ex libero rutrum risus, eu volutpat nisl tortor nec quam.
+                    In hac habitasse platea dictumst. Sed sed justo ac tortor ultrices consectetur.
+                    Mauris sit amet accumsan augue, scelerisque laoreet magna.
+                    Phasellus ipsum est, efficitur ut nunc ut, dignissim malesuada ex.
+                    Donec et molestie odio. Praesent consectetur elit eu elementum bibendum.
+                    Mauris sed ante et lorem egestas volutpat eget non ligula.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                    Etiam sit amet sollicitudin urna, vitae bibendum sapien.
+                    Nunc finibus eros efficitur massa viverra, vel fermentum lorem volutpat.</p>
+            </div>
+            <img id="my_image" src="/images/GD5_1435_web.jpg" alt="A picture of myself" title="From my highschool graduation."/>
             <div class="two_buttons">
                 <form action="/files/alexander_resume.pdf">
                     <input type="submit" value="Download my CV" />
@@ -93,9 +91,8 @@
             <div class="image_gallery">
                 <h2>Gallery</h2>
                 <img id="gallery_view" src="/images/young_pc.jpg" alt="Gallery view"/>
-                <div class="gallery_controls">
-                    <button id="random" onclick="getRandomImage()">Random Image</button>
-                </div>
+                <p id="gallery_description">Interacting with a personal computer while young.</p>
+                <button id="random" onclick="getRandomImage()">Random Image</button>
             </div>
             <div class="linux_user">
                 <h2>Archlinux user</h2>
@@ -110,18 +107,29 @@
         <div id="comments_title"><h1>Comments</h1></div>
         <div class="comments_page">
             <div class="comment_section">
-                <table id="comment_table">
-                    <colgroup>
-                        <col style="width: 30%;">
-                        <col style="width: 70%;">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th>Name</th>
-                            <th>Comment</th>
-                        </tr>
-                    </tbody>
-                </table>
+                <div id="table_container">
+                    <table id="comment_table">
+                        <colgroup>
+                            <col style="width: 30%;">
+                            <col style="width: 70%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="comment_options">
+                    <div style="display: inline-block; margin: auto; margin-left: 50px; height: 100%;">
+                        <input type="number" id="max_comments" min=1 value="100">
+                        <button style="height: 92%;" onclick="getComments()">Submit</button>
+                    </div>
+                    <button id="delete_button" onclick="deleteComments()">Delete Comments</button>
+                </div>
             </div>
             <div class="comment_form_container">
                 <h1 style="color: white; text-align: center;">Submit Comment</h1>

@@ -49,15 +49,11 @@ h2{
 .about_me {
 	height: fit-content;
 	background-color: #FAFAFA;
-    display: flex;
-	/*margin-top: -1.25em;*/
-}
-.about_center {
-	margin: auto;
-	width: 45em;
-    display: flex;
-    height: 100%;
-    margin-right: 5em;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 100%;
+    grid-column-gap: 5%;
+    padding: 30px 5%;
 }
 .last_page {
     background-image: url("/images/Arch_makepkg.jpg");
@@ -66,19 +62,25 @@ h2{
     background-size: cover;
     background-position: bottom right;
     overflow: hidden;
-    height: 100vh;
-    display: flex;
+    height: fit-content;
+    min-height: 100vh;
+    display: grid;
     color: white;
+    grid-template-rows: 100%;
+    grid-template-columns: 32% 48% 18%;
+    grid-column-gap: 1%;
+    padding: 0 2%;
 }
-.about_center img {
+#my_image {
     width: auto;
-    max-height: 85%;
+    max-width: 100%;
+    max-height: 90%;
+    height: auto;
     margin: auto;
     border-radius: 0.5em;
 }
 .description_area {
-    margin: auto;
-    margin-right: 3em;
+    margin: 10px auto;
 }
 .two_buttons {
     margin: auto;
@@ -91,9 +93,9 @@ h2{
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 12em;
-    height: 3em;
-    font-size: xx-large;
+    width: 10em;
+    height: 2.5em;
+    font-size: x-large;
     font-family: 'IBM Plex Sans';
     font-weight: 500;
     /*float: right;*/
@@ -102,17 +104,21 @@ h2{
     text-align: center;
     margin: auto;
     display: grid;
-    width: 30%
+    width: 90%;
 }
 .image_gallery {
     margin: auto;
-    width: 35%;
+    width: 100%;
     text-align: center;
+    display: grid;
+    grid-template-rows: 10% 70% 10% 10%;
+    grid-template-columns: 100%;
+    height: 80%;
 }
 .linux_user {
     margin: auto;
     text-align: center;
-    width: 15%;
+    width: 100%;
 }
 .relevant_coursework ul {
     text-align: left;
@@ -132,10 +138,11 @@ h2{
     margin-left: 0.5em;
 }
 #gallery_view {
-    max-width: 70%;
-    max-height: 50%;
+    max-width: 100%;
+    max-height: 100%;
     width: auto;
     height: auto;
+    margin: auto;
 }
 #random {
     background-color: #4CAF50;
@@ -144,11 +151,12 @@ h2{
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 12em;
-    height: 3em;
+    width: 9em;
+    height: 2em;
     font-size: xx-large;
     font-family: 'IBM Plex Sans';
     font-weight: 500;
+    margin: auto;
 }
 #princeton_line {
     display: grid;
@@ -158,13 +166,13 @@ h2{
 /* Styling below is for the dynamically generated comment section */
 #comments_title {
     text-align: center;
-    height: 6vh;
+    height: 4em;
 }
 #comments_title h1 {
     margin: 0;
 }
 .comments_page {
-    height: calc(94vh - 1em);
+    height: calc(100vh - 5em);
     background-image: url("/images/Arch_Matrix.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -175,19 +183,23 @@ h2{
     grid-template-rows: 100%;
 }
 .comment_section {
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 90%;
-    height: 90%;
-    overflow-y: scroll;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 100%;
 }
 #comment_table {
-    margin: auto;
+    margin: 0;
     width: 100%;
     color: black;
     background-color: white;
     border-collapse: collapse;
+}
+#table_container {
+    margin: 60px auto;
+    width: 90%;
+    height: calc(100% - 120px);
+    overflow-y: scroll;
 }
 #comment_table th, #comment_table td {
     border: 1px solid gray;
@@ -221,4 +233,20 @@ h2{
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 500;
     border-radius: 4px;
+}
+.comment_options button, .comment_options input {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    height: 80%
+}
+.comment_options {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+}
+#delete_button {
+    margin: auto;
+    margin-left: 50px;
+    width: 10em;
+    height: 90%;
 }
