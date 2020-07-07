@@ -29,7 +29,7 @@ public class CommentTable {
             return;
         }
 
-        if (checkInjection(name, comment)) {
+        if (!isSafe(name, comment)) {
             return;
         }
 
@@ -40,9 +40,9 @@ public class CommentTable {
         datastore.put(commentEntity);
     }
 
-    private boolean checkInjection(String name, String comment) {
+    private boolean isSafe(String name, String comment) {
         // Naive check for HTML injection by not allowing <, > in the text
-        return !(name.indexOf('<') == -1 && comment.indexOf('>') == -1);
+        return (name.indexOf('<') == -1 && comment.indexOf('>') == -1);
     }
 
     public List<Comment> getCommentEntries() {

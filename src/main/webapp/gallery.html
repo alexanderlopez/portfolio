@@ -3,14 +3,35 @@
     <head>
         <title>Gallery</title>
         <link rel="stylesheet" href="gallery_style.css">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=IBM+Plex+Serif:wght@500&family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBIhTuwuEejYfP26N4pBQlvDDyD2V2A-M&callback=initMap"></script>
+        <script src="gallery_script.js"></script>
     </head>
     <body>
         <header>
-            <!-- Add two links,one to the main gallery and one to the maps section where it displays locations -->
+            <a href="#gallery">Gallery</a>
+            <a href="#maps">Maps</a>
         </header>
-        <div class="gallery">
-        </div>
-        <div class="maps">
+        <div class="container">
+            <div id="gallery">
+                <h1 id="gallery_title">Gallery</h1>
+                <div class="image_container" style="background-image: url('/images/killington.jpg')">
+                </div>
+                <div class="image_container" style="background-image: url('/images/pico_07.JPG')">
+                </div>
+                <div class="image_container" style="background-image: url('/images/pico_17.jpg')">
+                </div>
+                <div class="image_container" style="background-image: url('/images/pico_fogata.JPG')">
+                </div>
+                <div class="image_container" style="background-image: url('/images/saona.jpg')">
+                </div>
+                <div class="image_container" style="background-image: url('/images/young_pc.jpg')">
+                </div>
+            </div>
+            <div id="maps">
+                <h1>Maps</h1>
+                <div id="map"></div>
+            </div>
         </div>
     </body>
 </html>

@@ -1,0 +1,87 @@
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3em calc(100% - 3em);
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+.container {
+    display: block;
+    overflow: scroll;
+    padding: 0 3em;
+}
+
+/* Header Styling */
+header {
+    background-color: black;
+    height: 3em;
+    padding-left: 2em;
+}
+
+header a {
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 0.85em;
+}
+
+header a:link, header a:visited {
+    text-decoration: none;
+}
+
+header a:hover {
+    background-color: darkgray;
+}
+
+header a:active {
+    background-color: gray;
+}
+
+/* Gallery Styling */
+#gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+#gallery_title {
+    grid-column: 1 / 4;
+}
+
+.image_container {
+    width: 100%;
+    padding-top: 70%;
+    overflow: hidden;
+    margin: auto;
+    background-size: cover;
+    background-position:  center center;
+    border-radius: 5px;
+}
+
+/* Maps Styling */
+
+#maps {
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 3em calc(100vh - 6em);
+    margin-top: 2em;
+}
+
+#maps h1 {
+    margin: 0;
+}
+
+#map {
+    height: 100%;
+}
