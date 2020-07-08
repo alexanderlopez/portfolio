@@ -5,3 +5,15 @@ function initMap() {
         zoom: 12
     });
 }
+
+function doOverlay(id) {
+    var overlay = document.getElementById(id);
+    var displayMode = overlay.style.display;
+
+    if (displayMode == "flex") {
+        overlay.style.display = "none";
+    }
+    else {
+        overlay.style.display = "flex";
+    }
+}
