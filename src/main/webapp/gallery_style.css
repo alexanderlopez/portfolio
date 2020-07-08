@@ -58,13 +58,21 @@ header a:active {
 }
 
 .image_container {
-    width: 100%;
+    width: 97%;
     padding-top: 70%;
     overflow: hidden;
-    margin: auto;
     background-size: cover;
     background-position:  center center;
     border-radius: 5px;
+    margin: 1.05% auto;
+    transition-timing-function:  ease-in-out;
+    transition: width 0.7s, height 0.7s, margin 0.7s;
+}
+
+.image_container:hover {
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 .overlay {
@@ -76,7 +84,7 @@ header a:active {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+    background-color: rgba(0,0,0,0.85); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
 }
