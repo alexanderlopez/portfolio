@@ -66,7 +66,8 @@ header a:active {
     border-radius: 5px;
     margin: 1.05% auto;
     transition-timing-function:  ease-in-out;
-    transition: width 0.7s, height 0.7s, margin 0.7s;
+    transition: width 0.5s, height 0.5s, margin 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.37);
 }
 
 .image_container:hover {
@@ -92,7 +93,7 @@ header a:active {
 .overlay img {
     display: block;
     width: auto;
-    height: calc(100% - 2.5em);
+    height: calc(100% - 4.5em);
     margin: auto;
 }
 
@@ -101,6 +102,13 @@ header a:active {
     margin-bottom: 0;
     margin-top: 1em;
     height: 1.5em;
+}
+
+.overlay button {
+    margin: auto;
+    height: 2em;
+    font-family: 'IBM Plex Sans';
+    font-weight: 500;
 }
 
 .image_w_caption {

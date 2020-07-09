@@ -16,10 +16,11 @@
             <div id="gallery">
                 <h1 id="gallery_title">Gallery</h1>
                 <div class="image_container" onclick="doOverlay('img1')" style="background-image: url('/images/killington.jpg')">
-                    <div class="overlay" id='img1' onclick="doOverlay(false, 'img1')">
+                    <div class="overlay" id='img1' >
                         <div class="image_w_caption">
                             <img src="/images/killington.jpg">
                             <p>Landscape at Killington (VT) summit.</p>
+                            <button onclick="markMap(1)">Location</button>
                         </div>
                     </div>
                 </div>
@@ -28,6 +29,7 @@
                         <div class="image_w_caption">
                             <img src="/images/pico_07.JPG">
                             <p>First summit of the tallest mountain in the Dominican Republic.</p>
+                            <button onclick="markMap(2)">Location</button>
                         </div>
                     </div>
                 </div>
@@ -36,6 +38,7 @@
                         <div class="image_w_caption">
                             <img src="/images/pico_17.jpg">
                             <p>Fifteenth summit of the tallest mountain in the Dominican Republic.</p>
+                            <button onclick="markMap(3)">Location</button>
                         </div>
                     </div>
                 </div>
@@ -44,6 +47,7 @@
                         <div class="image_w_caption">
                             <img src="/images/pico_fogata.JPG">
                             <p>Campfire in the middle of a valley [Valle del Tetero].</p>
+                            <button onclick="markMap(4)">Location</button>
                         </div>
                     </div>
                 </div>
@@ -52,6 +56,7 @@
                         <div class="image_w_caption">
                             <img src="/images/saona.jpg">
                             <p>Isla Saona (island to the south of the Dominican Republic).</p>
+                            <button onclick="markMap(5)">Location</button>
                         </div>
                     </div>
                 </div>
@@ -60,6 +65,25 @@
                         <div class="image_w_caption">
                             <img src="/images/young_pc.jpg">
                             <p>Interacting with a personal computer while young.</p>
+                            <button onclick="markMap(6)">Location</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image_container" onclick="doOverlay('img7')" style="background-image: url('/images/dr_beach_pano_web.jpg')">
+                    <div class="overlay" id='img7'>
+                        <div class="image_w_caption">
+                            <img src="/images/dr_beach_pano_web.jpg">
+                            <p>Panorama at a beach in the Dominican Republic.</p>
+                            <button onclick="markMap(7)">Location</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image_container" onclick="doOverlay('img8')" style="background-image: url('/images/waterfall-pano.jpg')">
+                    <div class="overlay" id='img8'>
+                        <div class="image_w_caption">
+                            <img src="/images/waterfall-pano.jpg">
+                            <p>Large waterfall in San Jose de las Matas, Dominican Republic.</p>
+                            <button onclick="markMap(8)">Location</button>
                         </div>
                     </div>
                 </div>
