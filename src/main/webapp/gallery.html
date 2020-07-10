@@ -3,14 +3,95 @@
     <head>
         <title>Gallery</title>
         <link rel="stylesheet" href="gallery_style.css">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=IBM+Plex+Serif:wght@500&family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBIhTuwuEejYfP26N4pBQlvDDyD2V2A-M&callback=initMap"></script>
+        <script src="gallery_script.js"></script>
     </head>
     <body>
         <header>
-            <!-- Add two links,one to the main gallery and one to the maps section where it displays locations -->
+            <a href="#gallery">Gallery</a>
+            <a href="#maps">Locations</a>
         </header>
-        <div class="gallery">
-        </div>
-        <div class="maps">
+        <div class="container">
+            <div id="gallery">
+                <h1 id="gallery_title">Gallery</h1>
+                <div class="image_container" onclick="doOverlay('img1')" style="background-image: url('/images/killington.jpg')">
+                    <div class="overlay" id='img1' >
+                        <div class="image_w_caption">
+                            <img src="/images/killington.jpg">
+                            <p>Landscape at Killington (VT) summit.</p>
+                            <button onclick="markMap(1)">Location</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image_container" onclick="doOverlay('img2')" style="background-image: url('/images/pico_07.JPG')">
+                    <div class="overlay" id='img2'>
+                        <div class="image_w_caption">
+                            <img src="/images/pico_07.JPG">
+                            <p>First summit of the tallest mountain in the Dominican Republic.</p>
+                            <button onclick="markMap(2)">Location</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image_container" onclick="doOverlay('img3')" style="background-image: url('/images/pico_17.jpg')">
+                    <div class="overlay" id='img3'>
+                        <div class="image_w_caption">
+                            <img src="/images/pico_17.jpg">
+                            <p>Fifteenth summit of the tallest mountain in the Dominican Republic.</p>
+                            <button onclick="markMap(3)">Location</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image_container" onclick="doOverlay('img4')" style="background-image: url('/images/pico_fogata.JPG')">
+                    <div class="overlay" id='img4'>
+                        <div class="image_w_caption">
+                            <img src="/images/pico_fogata.JPG">
+                            <p>Campfire in the middle of a valley [Valle del Tetero].</p>
+                            <button onclick="markMap(4)">Location</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image_container" onclick="doOverlay('img5')" style="background-image: url('/images/saona.jpg')">
+                    <div class="overlay" id='img5'>
+                        <div class="image_w_caption">
+                            <img src="/images/saona.jpg">
+                            <p>Isla Saona (island to the south of the Dominican Republic).</p>
+                            <button onclick="markMap(5)">Location</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image_container" onclick="doOverlay('img6')" style="background-image: url('/images/young_pc.jpg')">
+                    <div class="overlay" id='img6'>
+                        <div class="image_w_caption">
+                            <img src="/images/young_pc.jpg">
+                            <p>Interacting with a personal computer while young.</p>
+                            <button onclick="markMap(6)">Location</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image_container" onclick="doOverlay('img7')" style="background-image: url('/images/dr_beach_pano_web.jpg')">
+                    <div class="overlay" id='img7'>
+                        <div class="image_w_caption">
+                            <img src="/images/dr_beach_pano_web.jpg">
+                            <p>Panorama at a beach in the Dominican Republic.</p>
+                            <button onclick="markMap(7)">Location</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image_container" onclick="doOverlay('img8')" style="background-image: url('/images/waterfall-pano.jpg')">
+                    <div class="overlay" id='img8'>
+                        <div class="image_w_caption">
+                            <img src="/images/waterfall-pano.jpg">
+                            <p>Large waterfall in San Jose de las Matas, Dominican Republic.</p>
+                            <button onclick="markMap(8)">Location</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="maps">
+                <h1>Locations</h1>
+                <div id="map"></div>
+            </div>
         </div>
     </body>
 </html>

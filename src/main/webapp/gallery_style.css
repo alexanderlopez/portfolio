@@ -1,0 +1,140 @@
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3em calc(100% - 3em);
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+.container {
+    display: block;
+    overflow: scroll;
+    padding: 0 3em;
+    height: 100%;
+}
+
+/* Header Styling */
+header {
+    background-color: black;
+    height: 3em;
+    padding-left: 2em;
+}
+
+header a {
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 0.85em;
+}
+
+header a:link, header a:visited {
+    text-decoration: none;
+}
+
+header a:hover {
+    background-color: darkgray;
+}
+
+header a:active {
+    background-color: gray;
+}
+
+/* Gallery Styling */
+#gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+#gallery_title {
+    grid-column: 1 / 4;
+}
+
+.image_container {
+    width: 97%;
+    padding-top: 70%;
+    overflow: hidden;
+    background-size: cover;
+    background-position:  center center;
+    border-radius: 5px;
+    margin: 1.05% auto;
+    transition-timing-function:  ease-in-out;
+    transition: width 0.5s, height 0.5s, margin 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.37);
+}
+
+.image_container:hover {
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.85); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+.overlay img {
+    display: block;
+    width: auto;
+    height: calc(100% - 4.5em);
+    margin: auto;
+}
+
+.overlay p {
+    color: white;
+    margin-bottom: 0;
+    margin-top: 1em;
+    height: 1.5em;
+}
+
+.overlay button {
+    margin: auto;
+    height: 2em;
+    font-family: 'IBM Plex Sans';
+    font-weight: 500;
+}
+
+.image_w_caption {
+    text-align: center;
+    display: block;
+    height: 90%;
+    width: 100%;
+    margin: auto;
+}
+
+/* Maps Styling */
+
+#maps {
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 3em calc(100vh - 6em);
+    margin-top: 2em;
+}
+
+#maps h1 {
+    margin: 0;
+}
+
+#map {
+    height: 100%;
+}
