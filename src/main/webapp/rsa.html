@@ -3,11 +3,48 @@
     <head>
         <title>RSA Tool</title>
         <script src="rsa_script.js"></script>
+        <link rel="stylesheet" href="rsa_style.css">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=IBM+Plex+Serif:wght@500&family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
     </head>
     <body onload="initTool()">
-        <h1>Hello!</h1>
-        <p>I generate RSA keys and perform encryption/decryption</p>
-        <p id="welcome"></p>
-        <a id="login_link"></a>
+        <div class="container">
+            <h1>RSA</h1>
+            <p id="welcome">Stranger</p>
+            <a id="login_link">Login</a>
+            <div class="key_container">
+                <div class="label_text">
+                    <h3>Public Modulus</h3>
+                    <textarea id="public_modulus" disabled="true"></textarea>
+                </div>
+                <div class="label_text">
+                    <h3>Public Exponent</h3>
+                    <textarea id="public_exponent" disabled="true"></textarea>
+                </div>
+                <div class="label_text">
+                    <h3>Private Exponent</h3>
+                    <textarea id="private_exponent" disabled="true"></textarea>
+                </div>
+                <button id="generate_key" onclick="generateKey()" disabled="true">Generate Key</button>
+            </div>
+            <div class="cipher_manipulation">
+                <div class="label_text">
+                    <h3>Cipher</h3>
+                    <textarea id="cipher_text"></textarea>
+                </div>
+                <div class="label_text">
+                    <h3>Transformed Cipher</h3>
+                    <textarea id="result_text" disabled="true"></textarea>
+                </div>
+                <div class="label_text">
+                    <h3>Exponent</h3>
+                    <textarea id="exponent_text"></textarea>
+                </div>
+                <div class="label_text">
+                    <h3>Modulus</h3>
+                    <textarea id="modulus_text"></textarea>
+                </div>
+                <button onclick="transformCipher()">Transform</button>
+            </div>
+        </div>
     </body>
 </html>
