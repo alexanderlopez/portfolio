@@ -49,9 +49,9 @@ function generateKey() {
                     headers: { 'Content-type': 'application/x-www-form-urlencoded'},
                     body: "action=GENERATE_KEY"};
     
-    fetch('/rsa-data', options).then(response => response.json()).then(object => {
-        document.getElementById('public_modulus').innerText = object.public_modulus;
-        document.getElementById('public_exponent').innerText = object.public_exponent;
-        document.getElementById('private_exponent').innerText = object.private_exponent;
+    fetch('/rsa-data', options).then(response => response.json()).then(rsaData => {
+        document.getElementById('public_modulus').innerText = rsaData.public_modulus;
+        document.getElementById('public_exponent').innerText = rsaData.public_exponent;
+        document.getElementById('private_exponent').innerText = rsaData.private_exponent;
     });
 }
