@@ -47,14 +47,6 @@ public class RSA {
         return keySize;
     }
 
-    public BigInteger encrypt(BigInteger message) {
-        return message.modPow(e, n);
-    }
-
-    public BigInteger decrypt(BigInteger cipher) {
-        return cipher.modPow(d, n);
-    }
-
     public static BigInteger transform(BigInteger cipher, BigInteger exponent, BigInteger modulus) {
         return cipher.modPow(exponent, modulus);
     }
