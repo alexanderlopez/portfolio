@@ -21,8 +21,11 @@ public class CommentTable {
     }
 
     public void addEntry(String name, String comment) {
+	String finalName = name;
+	String finalComment = comment;
+
         if (name == null || name.isEmpty()) {
-            name = "Anonymous";
+            finalName = "Anonymous";
         }
 
         if (comment == null || comment.isEmpty()) {
@@ -30,12 +33,15 @@ public class CommentTable {
         }
 
         if (!isSafe(name, comment)) {
-            return;
+            finalName = finalName.replaceAll("<", "&lt;");
+	    finalName = finalName.replaceAll(">", "&gt;");
+	    finalComment = finalComment.replaceAll("<", "&lt;");
+	    finalComment = finalComment.replaceAll(">", "&gt;");
         }
 
         Entity commentEntity = new Entity(ENTRY_KEY);
-        commentEntity.setProperty(NAME_KEY, name);
-        commentEntity.setProperty(COMMENT_KEY, comment);
+        commentEntity.setProperty(NAME_KEY, finalName);
+        commentEntity.setProperty(COMMENT_KEY, finalComment);
 
         datastore.put(commentEntity);
     }
